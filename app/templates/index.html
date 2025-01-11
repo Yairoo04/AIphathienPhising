@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection</title>
+</head>
+<body>
+    <h1>Phishing Detection API</h1>
+    <label for="urlInput">Enter URL to check:</label>
+    <input type="text" id="urlInput" value="https://www.youtube.com/" />
+    <button onclick="checkURL()">Check URL</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkURL() {
+            const url = "http://127.0.0.1:5001/predict";
+            const inputUrl = document.getElementById("urlInput").value;
+            const data = { url: inputUrl };
+
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").innerHTML = `
+                        <p>URL: ${data.url}</p>
+                        <p>Result: ${data.result}</p>
+                        <p>Random Forest Confidence: ${data.rf_confidence}</p>
+                        <p>SVM Confidence: ${data.svm_confidence}</p>
+                        <p>Ensemble Confidence: ${data.ensemble_confidence}</p>
+                    `;
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById("result").innerHTML = "Error while processing the request.";
+                });
+        }
+    </script>
+</body>
+</html>
