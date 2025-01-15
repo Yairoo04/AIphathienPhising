@@ -24,6 +24,9 @@ def extract_features(url):
             'num_dashes': domain.count('-'),
             'path_length': len(parsed_url.path),
             'query_length': len(parsed_url.query),
+            'has_ip': 1 if re.search(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', domain) else 0,  # Kiểm tra IP
+            'has_at_symbol': 1 if '@' in url else 0,  # Kiểm tra ký tự "@"
+            'redirect_count': url.count('http') - 1  # Đếm số lần chuyển hướng (http xuất hiện)
         }
     except Exception as e:
         # Ghi log lỗi thay vì in ra màn hình
@@ -37,5 +40,8 @@ def extract_features(url):
             'num_subdomains': -1,      # Giá trị mặc định
             'num_dashes': -1,          # Giá trị mặc định
             'path_length': -1,         # Giá trị mặc định
-            'query_length': -1         # Giá trị mặc định
+            'query_length': -1,        # Giá trị mặc định
+            'has_ip': -1,              # Giá trị mặc định
+            'has_at_symbol': -1,       # Giá trị mặc định
+            'redirect_count': -1       # Giá trị mặc định
         }

@@ -22,7 +22,7 @@ valid_indices = []
 
 for idx, url in enumerate(data['URL']):
     features = extract_features(url)  # Gọi hàm extract_features
-    if features is not None:  # Chỉ thêm các URL hợp lệ
+    if features and all(value != -1 for value in features.values()):  # Chỉ thêm các URL hợp lệ
         extracted_features.append(features)
         valid_indices.append(idx)
 
