@@ -32,7 +32,6 @@ dataset_path = "../dataset"
 epochs = 30
 batch_size = 32
 
-# Load dataset với augmentation
 train_dataset, val_dataset = load_dataset(dataset_path, batch_size=batch_size, augment=True)
 
 # Xây dựng mô hình mới

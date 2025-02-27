@@ -6,18 +6,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from feature_extraction import extract_features
 
-# Tạo thư mục lưu model
-os.makedirs("../models", exist_ok=True)
-
 # Load dataset
 data_path = '../data/phishing.csv'
 data = pd.read_csv(data_path)
 
-# Kiểm tra và làm sạch dữ liệu
+# Kiểm tra và xử lý dữ liệu
 if 'URL' not in data.columns or 'Label' not in data.columns:
     raise ValueError("Dataset không chứa các cột bắt buộc: 'URL' và 'Label'")
 
-data = data.dropna(subset=['URL', 'Label'])  # Loại bỏ hàng có giá trị thiếu
+data = data.dropna(subset=['URL', 'Label']) 
 data = data[data['Label'].isin([0, 1])]  # Giữ lại các nhãn hợp lệ (0 hoặc 1)
 
 # Gán nhãn: 0 - Legitimate, 1 - Phishing
@@ -47,7 +44,6 @@ X = features_df.drop(columns=['Label'])
 y = features_df['Label']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Kiểm tra số lượng mẫu
 print(f"Số lượng mẫu train: {len(X_train)}, Số lượng mẫu test: {len(X_test)}")
 
 # Train model
@@ -60,8 +56,6 @@ with open(model_path, "wb") as f:
     pickle.dump(rf_model, f)
 
 print(f"Model đã được lưu tại: {model_path}")
-
-# Evaluate model
 y_pred = rf_model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Độ chính xác của Random Forest: {accuracy:.2f}")

@@ -71,7 +71,7 @@ def load_dataset_paths(dataset_path):
             continue
 
         for filename in os.listdir(folder_path):
-            if filename.lower().endswith((".png", ".jpg", ".jpeg")):  # Chỉ lấy file ảnh
+            if filename.lower().endswith((".png", ".jpg", ".jpeg")): 
                 image_paths.append(os.path.join(folder_path, filename))
                 labels.append(label)  # 1 nếu là phishing, 0 nếu là legitimate
 
