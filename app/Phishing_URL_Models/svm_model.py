@@ -16,7 +16,7 @@ if 'URL' not in data.columns or 'Label' not in data.columns:
     raise ValueError("Dataset không chứa các cột bắt buộc: 'URL' và 'Label'")
 
 data = data.dropna(subset=['URL', 'Label'])
-data = data[data['Label'].isin([0, 1])]  # Giữ lại các nhãn hợp lệ (0 hoặc 1)
+data = data[data['Label'].isin([0, 1])] 
 
 # Gán nhãn: 0 - Legitimate, 1 - Phishing
 label_mapping = {0: 'Legitimate', 1: 'Phishing'}

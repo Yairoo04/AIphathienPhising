@@ -14,11 +14,11 @@ from Phishing_Image_Models.data_loader import preprocess_image  # Hàm tiền x�
 app = Flask(__name__)
 CORS(app)
 
-UPLOAD_FOLDER = "uploads"  # Thư mục lưu ảnh tạm thời
+UPLOAD_FOLDER = "uploads" 
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg"}
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Tạo thư mục nếu chưa có
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load các mô hình
 with open("models/random_forest.pkl", "rb") as f:
@@ -67,15 +67,14 @@ def predict():
 
         # Xử lý ảnh cho CNN (Resize về 128x128)
         cnn_input = cv2.resize(image, (128, 128))
-        cnn_input = cnn_input.astype("float32") / 255.0  # Chuẩn hóa
-        cnn_input = np.expand_dims(cnn_input, axis=0)  # Thêm batch dimension
+        cnn_input = cnn_input.astype("float32") / 255.0 
+        cnn_input = np.expand_dims(cnn_input, axis=0) 
 
         # Dự đoán với CNN
-        cnn_prediction = float(cnn_model.predict(cnn_input)[0][0])  # Chuyển sang float
-
+        cnn_prediction = float(cnn_model.predict(cnn_input)[0][0]) 
         # Xử lý ảnh cho Random Forest
-        rf_features = preprocess_image(file_path).flatten().reshape(1, -1)  # Trích xuất đặc trưng
-        rf_prediction_proba = float(rf_image_model.predict_proba(rf_features)[:, 1][0])  # Chuyển sang float
+        rf_features = preprocess_image(file_path).flatten().reshape(1, -1)  
+        rf_prediction_proba = float(rf_image_model.predict_proba(rf_features)[:, 1][0])  
 
         # Ensemble (tổng hợp kết quả)
         cnn_weight = 0.5
@@ -95,14 +94,14 @@ def predict():
             return jsonify({'error': 'URL is required'}), 400
 
         # Dự đoán bằng Random Forest
-        rf_features = pd.DataFrame([extract_features(url)])  # Sử dụng hàm extract_features để trích xuất đặc trưng
+        rf_features = pd.DataFrame([extract_features(url)])  
         rf_prediction_proba = rf_url_model.predict_proba(rf_features)
         rf_prediction = float(rf_prediction_proba[:, 1][0])
 
         # Dự đoán bằng SVM
         svm_input = vectorizer.transform([url])
         svm_prediction_proba = svm_model.decision_function(svm_input)
-        svm_confidence = 1 / (1 + np.exp(-svm_prediction_proba[0]))  # Sử dụng hàm sigmoid để tính xác suất
+        svm_confidence = 1 / (1 + np.exp(-svm_prediction_proba[0])) 
 
         # Trọng số cho ensemble
         rf_weight = 0.5
