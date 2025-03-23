@@ -6,13 +6,11 @@ def extract_features(url):
         if not url.startswith(('http://', 'https://')):
             url = 'http://' + url
 
-        # Phân tích URL
         parsed_url = urlparse(url)
         domain = parsed_url.netloc
         if not domain:
             raise ValueError(f"Invalid URL: {url}")
 
-        # Trích xuất các đặc trưng từ URL
         return {
             'url_length': len(url),
             'num_special_chars': len(re.findall(r'[?|#|=|&]', url)),
