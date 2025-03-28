@@ -2,41 +2,43 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
-}
-
-.container {
+  }
+  
+  .container {
     width: 80%;
     margin: 20px auto;
-}
-
-.row {
+  }
+  
+  .row {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-}
-
-.column {
+  }
+  
+  .column {
     width: 48%;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-#urlInput {
-    height: 20px;
-    width: 30%;
-}
-
-.result-box {
+  }
+  
+  input[type="text"],
+  input[type="file"] {
+    width: 60%;
+    padding: 5px;
+    margin: 5px 0;
+  }
+  
+  .result-box {
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-}
-
-button {
+  }
+  
+  button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -44,8 +46,9 @@ button {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #0056b3;
-}
+  }
+  

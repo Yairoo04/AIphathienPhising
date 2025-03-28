@@ -50,7 +50,7 @@ def build_cnn(input_shape=(128, 128, 3)):
     
     return model
 
-dataset_path = "../dataset"
+dataset_path = "../dataset_Image"
 epochs = 30
 batch_size = 32
 

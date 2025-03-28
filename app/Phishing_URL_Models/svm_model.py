@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score
 
-data_path = '../data/phishing.csv'
+data_path = '../dataset_URL/phishing.csv'
 data = pd.read_csv(data_path)
 
 if 'URL' not in data.columns or 'Label' not in data.columns:
@@ -26,7 +26,7 @@ vectorizer = TfidfVectorizer(max_features=max_words)
 X = vectorizer.fit_transform(data['URL'])
 y = data['Label']
 
-vectorizer_path = "../models/vectorizer.pkl"
+vectorizer_path = "../models/vectorizer_URL.pkl"
 with open(vectorizer_path, "wb") as f:
     pickle.dump(vectorizer, f)
 
@@ -51,7 +51,7 @@ y_pred = svm_model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Độ chính xác của SVM trên tập test: {accuracy:.2f}")
 
-model_path = "../models/svm_model.pkl"
+model_path = "../models/svm_model_URL.pkl"
 with open(model_path, "wb") as f:
     pickle.dump(svm_model, f)
 

@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Phishing Detection</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Phishing Detection</title>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Phishing Detection</h1>
+  <div class="container">
+    <h1>Phishing Detection</h1>
 
-        <div class="row">
-            <div class="column">
-                <h2>Check URL</h2>
-                <label for="urlInput">Enter URL to check:</label>
-                <input type="text" id="urlInput" placeholder="Enter URL..." />
-                <button onclick="checkURL()">Check URL</button>
-                <div id="urlResult" class="result-box"></div>
-            </div>
+    <div class="row">
+      <div class="column">
+        <h2>Check URL</h2>
+        <label for="urlInput">Enter URL to check:</label>
+        <input type="text" id="urlInput" placeholder="Enter URL..." />
+        <br>
+        <button onclick="checkURL()">Check URL</button>
+        <div id="urlResult" class="result-box"></div>
+      </div>
 
-            <div class="column">
-                <h2>Check Image</h2>
-                <label for="fileInput">Upload an image to check:</label>
-                <input type="file" id="fileInput" accept="image/*" />
-                <button onclick="uploadImage()">Check Image</button>
-                <div id="preview"></div>
-                <div id="imageResult" class="result-box"></div>
-            </div>
-        </div>
+      <div class="column">
+        <h2>Check Image or PDF</h2>
+        <label for="fileInput">Upload an image or PDF:</label>
+        <input type="file" id="fileInput" accept="image/*,.pdf" />
+        <br>
+        <button onclick="uploadFile()">Check File</button>
+        <div id="preview"></div>
+        <div id="fileResult" class="result-box"></div>
+      </div>
     </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
-
-<script src="{{ url_for('static', filename='app.js') }}"></script>
-
 </html>

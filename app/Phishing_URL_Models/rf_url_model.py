@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 from feature_extraction import extract_features
 
 # Load dataset
-data_path = '../data/phishing.csv'
+data_path = '../dataset_URL/phishing.csv'
 data = pd.read_csv(data_path)
 
 if 'URL' not in data.columns or 'Label' not in data.columns:
@@ -45,7 +45,7 @@ print(f"Số lượng mẫu train: {len(X_train)}, Số lượng mẫu test: {le
 rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-model_path = "../models/random_forest.pkl"
+model_path = "../models/random_forest_URL.pkl"
 with open(model_path, "wb") as f:
     pickle.dump(rf_model, f)
 

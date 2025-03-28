@@ -8,7 +8,7 @@ from data_loader import load_dataset_paths, preprocess_image
 import pickle
 
 
-dataset_path = "../dataset"
+dataset_path = "../dataset_Image"
 
 image_paths, labels = load_dataset_paths(dataset_path)
 
