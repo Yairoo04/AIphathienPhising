@@ -5,42 +5,42 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 import cv2
 
-def load_dataset(dataset_path, img_size=(128, 128), batch_size=32, augment=True):
-    datagen_params = {
-        "rescale": 1.0 / 255,
-        "validation_split": 0.2  
-    }
+# def load_dataset(dataset_path, img_size=(128, 128), batch_size=32, augment=True):
+#     datagen_params = {
+#         "rescale": 1.0 / 255,
+#         "validation_split": 0.2  
+#     }
 
-    if augment:
-        datagen_params.update({
-            "rotation_range": 20,
-            "width_shift_range": 0.2,
-            "height_shift_range": 0.2,
-            "shear_range": 0.2,
-            "zoom_range": 0.2,
-            "horizontal_flip": True
-        })
+#     if augment:
+#         datagen_params.update({
+#             "rotation_range": 20,
+#             "width_shift_range": 0.2,
+#             "height_shift_range": 0.2,
+#             "shear_range": 0.2,
+#             "zoom_range": 0.2,
+#             "horizontal_flip": True
+#         })
 
-    train_datagen = ImageDataGenerator(**datagen_params)
-    val_datagen = ImageDataGenerator(rescale=1.0 / 255, validation_split=0.2)
+#     train_datagen = ImageDataGenerator(**datagen_params)
+#     val_datagen = ImageDataGenerator(rescale=1.0 / 255, validation_split=0.2)
 
-    train_generator = train_datagen.flow_from_directory(
-        dataset_path,
-        target_size=img_size,
-        batch_size=batch_size,
-        class_mode='binary',
-        subset='training'
-    )
+#     train_generator = train_datagen.flow_from_directory(
+#         dataset_path,
+#         target_size=img_size,
+#         batch_size=batch_size,
+#         class_mode='binary',
+#         subset='training'
+#     )
 
-    val_generator = val_datagen.flow_from_directory(
-        dataset_path,
-        target_size=img_size,
-        batch_size=batch_size,
-        class_mode='binary',
-        subset='validation'
-    )
+#     val_generator = val_datagen.flow_from_directory(
+#         dataset_path,
+#         target_size=img_size,
+#         batch_size=batch_size,
+#         class_mode='binary',
+#         subset='validation'
+#     )
 
-    return train_generator, val_generator
+#     return train_generator, val_generator
 
 def load_dataset_paths(dataset_path):
     image_paths = []

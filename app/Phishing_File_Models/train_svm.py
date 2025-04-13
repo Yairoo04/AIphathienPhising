@@ -20,7 +20,8 @@ def svm_model():
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
     
-    model = SVC(kernel="rbf", C=1.0, gamma="scale", probability=True, random_state=42)
+    model = SVC(kernel="rbf", C=100.0, gamma="scale", probability=True, random_state=42)
+    
     model.fit(X_train_scaled, y_train)
     
     y_pred = model.predict(X_test_scaled)
@@ -35,7 +36,7 @@ def svm_model():
     precision_manual = tp / (tp + fp) if (tp + fp) != 0 else 0
     recall_manual = tp / (tp + fn) if (tp + fn) != 0 else 0
 
-    print("\nSử dụng công thức tính toán thủ công:")
+    print("\nĐánh giá mô hình:")
     print(f"- Độ chính xác (Accuracy): {accuracy_manual:.2f}")
     print(f"- Độ chính xác dự đoán Phishing (Precision): {precision_manual:.2f}")
     print(f"- Khả năng nhận diện Phishing đúng (Recall): {recall_manual:.2f}")

@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix
 
-data_path = '../dataset_URL/phishing.csv'
+data_path = '../dataset_URL/phishing_URL.csv'
 data = pd.read_csv(data_path)
 
 if 'URL' not in data.columns or 'Label' not in data.columns:
@@ -57,7 +57,7 @@ accuracy_manual = (tp + tn) / (tp + tn + fp + fn)
 precision_manual = tp / (tp + fp) if (tp + fp) != 0 else 0
 recall_manual = tp / (tp + fn) if (tp + fn) != 0 else 0
 
-print("\nSử dụng công thức tính toán thủ công:")
+print("\nĐánh giá mô hình:")
 print(f"- Độ chính xác (Accuracy): {accuracy_manual:.2f}")
 print(f"- Độ chính xác dự đoán Phishing (Precision): {precision_manual:.2f}")
 print(f"- Khả năng nhận diện Phishing đúng (Recall): {recall_manual:.2f}")

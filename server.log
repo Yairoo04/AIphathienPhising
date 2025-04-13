@@ -1,0 +1,151 @@
+2025-04-13 14:36:21,126 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.194:5000
+2025-04-13 14:36:21,126 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 14:36:22,694 - INFO - 127.0.0.1 - - [13/Apr/2025 14:36:22] "GET / HTTP/1.1" 200 -
+2025-04-13 14:36:22,891 - INFO - 127.0.0.1 - - [13/Apr/2025 14:36:22] "GET /static/styles.css HTTP/1.1" 200 -
+2025-04-13 14:36:22,905 - INFO - 127.0.0.1 - - [13/Apr/2025 14:36:22] "GET /static/app.js HTTP/1.1" 200 -
+2025-04-13 14:36:22,984 - INFO - 127.0.0.1 - - [13/Apr/2025 14:36:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-13 14:36:29,885 - ERROR - Failed to load model random_forest_file_pickle: Model file D:\1. BaiTap\4. Python\CodeAIPhishing\app\models\random_forest_file.pkl does not exist
+2025-04-13 14:36:29,885 - ERROR - Error in /predict: Model file D:\1. BaiTap\4. Python\CodeAIPhishing\app\models\random_forest_file.pkl does not exist
+2025-04-13 14:36:29,887 - INFO - 127.0.0.1 - - [13/Apr/2025 14:36:29] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-13 14:38:30,375 - INFO - 127.0.0.1 - - [13/Apr/2025 14:38:30] "GET / HTTP/1.1" 200 -
+2025-04-13 14:38:30,411 - INFO - 127.0.0.1 - - [13/Apr/2025 14:38:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 14:38:30,413 - INFO - 127.0.0.1 - - [13/Apr/2025 14:38:30] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2025-04-13 14:38:36,526 - ERROR - Failed to load model random_forest_file_pickle: Model file D:\1. BaiTap\4. Python\CodeAIPhishing\app\models\random_forest_file.pkl does not exist
+2025-04-13 14:38:36,528 - ERROR - Error in /predict: Model file D:\1. BaiTap\4. Python\CodeAIPhishing\app\models\random_forest_file.pkl does not exist
+2025-04-13 14:38:36,529 - INFO - 127.0.0.1 - - [13/Apr/2025 14:38:36] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-13 14:39:09,696 - INFO - 127.0.0.1 - - [13/Apr/2025 14:39:09] "GET / HTTP/1.1" 200 -
+2025-04-13 14:39:09,728 - INFO - 127.0.0.1 - - [13/Apr/2025 14:39:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 14:39:09,730 - INFO - 127.0.0.1 - - [13/Apr/2025 14:39:09] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2025-04-13 14:39:13,454 - ERROR - Failed to load model random_forest_file_pickle: Model file D:\1. BaiTap\4. Python\CodeAIPhishing\app\models\random_forest_file.pkl does not exist
+2025-04-13 14:39:13,456 - ERROR - Error in /predict: Model file D:\1. BaiTap\4. Python\CodeAIPhishing\app\models\random_forest_file.pkl does not exist
+2025-04-13 14:39:13,458 - INFO - 127.0.0.1 - - [13/Apr/2025 14:39:13] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-13 14:40:57,807 - INFO - 127.0.0.1 - - [13/Apr/2025 14:40:57] "GET / HTTP/1.1" 200 -
+2025-04-13 14:40:57,841 - INFO - 127.0.0.1 - - [13/Apr/2025 14:40:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 14:40:57,842 - INFO - 127.0.0.1 - - [13/Apr/2025 14:40:57] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2025-04-13 14:41:01,845 - ERROR - Failed to load model random_forest_file_pickle: Model file D:\1. BaiTap\4. Python\CodeAIPhishing\app\models\random_forest_file.pkl does not exist
+2025-04-13 14:41:01,846 - ERROR - Error in /predict: Model file D:\1. BaiTap\4. Python\CodeAIPhishing\app\models\random_forest_file.pkl does not exist
+2025-04-13 14:41:01,850 - INFO - 127.0.0.1 - - [13/Apr/2025 14:41:01] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-13 14:43:32,851 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.194:5000
+2025-04-13 14:43:32,851 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 14:43:37,477 - INFO - 127.0.0.1 - - [13/Apr/2025 14:43:37] "GET / HTTP/1.1" 200 -
+2025-04-13 14:43:37,601 - INFO - 127.0.0.1 - - [13/Apr/2025 14:43:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 14:43:37,603 - INFO - 127.0.0.1 - - [13/Apr/2025 14:43:37] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2025-04-13 14:43:42,468 - INFO - Loaded model: random_forest_file_pickle
+2025-04-13 14:43:42,488 - INFO - Loaded model: scaler_file_pickle
+2025-04-13 14:43:42,502 - INFO - Loaded model: svm_model_file_pickle
+2025-04-13 14:43:42,508 - INFO - 127.0.0.1 - - [13/Apr/2025 14:43:42] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:43:58,411 - INFO - Loaded model: random_forest_email_joblib
+2025-04-13 14:43:58,422 - INFO - Loaded model: svm_model_email_joblib
+2025-04-13 14:43:58,424 - INFO - Loaded model: scaler_email_joblib
+2025-04-13 14:43:58,438 - INFO - 127.0.0.1 - - [13/Apr/2025 14:43:58] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:04,865 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:04] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:10,855 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:10] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:16,876 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:16] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:22,449 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:22] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:26,619 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:26] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:32,116 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:32] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:37,763 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:37] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:41,175 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:41] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:44:46,527 - INFO - 127.0.0.1 - - [13/Apr/2025 14:44:46] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:46:06,500 - INFO - 127.0.0.1 - - [13/Apr/2025 14:46:06] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:46:09,975 - INFO - 127.0.0.1 - - [13/Apr/2025 14:46:09] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:46:13,418 - INFO - 127.0.0.1 - - [13/Apr/2025 14:46:13] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:48:45,653 - INFO - 127.0.0.1 - - [13/Apr/2025 14:48:45] "POST /predict HTTP/1.1" 200 -
+2025-04-13 14:51:05,554 - INFO - 127.0.0.1 - - [13/Apr/2025 14:51:05] "GET / HTTP/1.1" 200 -
+2025-04-13 14:51:05,587 - INFO - 127.0.0.1 - - [13/Apr/2025 14:51:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 14:51:05,587 - INFO - 127.0.0.1 - - [13/Apr/2025 14:51:05] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2025-04-13 14:51:10,051 - INFO - 127.0.0.1 - - [13/Apr/2025 14:51:10] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:17:56,770 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.194:5001
+2025-04-13 17:17:56,770 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 17:17:58,154 - INFO - 127.0.0.1 - - [13/Apr/2025 17:17:58] "GET / HTTP/1.1" 200 -
+2025-04-13 17:17:58,311 - INFO - 127.0.0.1 - - [13/Apr/2025 17:17:58] "GET /static/styles.css HTTP/1.1" 200 -
+2025-04-13 17:17:58,312 - INFO - 127.0.0.1 - - [13/Apr/2025 17:17:58] "GET /static/app.js HTTP/1.1" 200 -
+2025-04-13 17:18:45,003 - INFO - Loaded model: random_forest_URL_pickle
+2025-04-13 17:18:45,037 - INFO - Loaded model: vectorizer_URL_pickle
+2025-04-13 17:18:45,047 - INFO - Loaded model: svm_model_URL_pickle
+2025-04-13 17:18:45,060 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:45] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:45,099 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:45] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:45,413 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:45] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:45,674 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:45] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:45,732 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:45] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:46,001 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:46] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:46,048 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:46] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:46,341 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:46] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:46,379 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:46] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:46,667 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:46] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:46,704 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:46] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:46,980 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:46] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:47,024 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:47] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:47,303 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:47] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:47,355 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:47] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:18:47,620 - INFO - 127.0.0.1 - - [13/Apr/2025 17:18:47] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:32,930 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:32] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:33,252 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:33] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:33,517 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:33] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:33,573 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:33] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:33,832 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:33] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:33,892 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:33] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:34,153 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:34] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:34,209 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:34] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:34,475 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:34] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:34,540 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:34] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:34,792 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:34] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:34,862 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:34] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:35,108 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:35] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:35,190 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:35] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:35,425 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:35] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:19:35,517 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:35] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:21:01,329 - INFO - Loaded model: random_forest_email_joblib
+2025-04-13 17:21:01,332 - INFO - Loaded model: svm_model_email_joblib
+2025-04-13 17:21:01,333 - INFO - Loaded model: scaler_email_joblib
+2025-04-13 17:21:01,346 - INFO - 127.0.0.1 - - [13/Apr/2025 17:21:01] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:21:23,075 - INFO - 127.0.0.1 - - [13/Apr/2025 17:21:23] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:22:49,537 - INFO - Loaded model: cnn_phishing_image_keras
+2025-04-13 17:22:52,480 - INFO - Loaded model: rf_image_model_joblib
+2025-04-13 17:22:52,489 - INFO - 127.0.0.1 - - [13/Apr/2025 17:22:52] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:23:16,865 - INFO - 127.0.0.1 - - [13/Apr/2025 17:23:16] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:23:59,746 - INFO - Loaded model: random_forest_file_pickle
+2025-04-13 17:23:59,754 - INFO - Loaded model: scaler_file_pickle
+2025-04-13 17:23:59,758 - INFO - Loaded model: svm_model_file_pickle
+2025-04-13 17:23:59,761 - INFO - 127.0.0.1 - - [13/Apr/2025 17:23:59] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:24:05,020 - INFO - 127.0.0.1 - - [13/Apr/2025 17:24:05] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:36:46,276 - INFO - 192.168.1.194 - - [13/Apr/2025 17:36:46] "GET / HTTP/1.1" 200 -
+2025-04-13 17:36:46,353 - INFO - 192.168.1.194 - - [13/Apr/2025 17:36:46] "GET /static/styles.css HTTP/1.1" 200 -
+2025-04-13 17:36:46,354 - INFO - 192.168.1.194 - - [13/Apr/2025 17:36:46] "GET /static/app.js HTTP/1.1" 200 -
+2025-04-13 17:36:46,427 - INFO - 192.168.1.194 - - [13/Apr/2025 17:36:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-13 17:36:52,796 - INFO - 192.168.1.194 - - [13/Apr/2025 17:36:52] "GET / HTTP/1.1" 200 -
+2025-04-13 17:36:52,923 - INFO - 192.168.1.194 - - [13/Apr/2025 17:36:52] "GET /static/styles.css HTTP/1.1" 200 -
+2025-04-13 17:36:52,931 - INFO - 192.168.1.194 - - [13/Apr/2025 17:36:52] "GET /static/app.js HTTP/1.1" 200 -
+2025-04-13 17:41:14,259 - ERROR - Error extracting PDF features from ./uploads\test2.pdf: EOF marker not found
+2025-04-13 17:41:14,261 - ERROR - Error in /predict: Failed to process PDF: EOF marker not found
+2025-04-13 17:41:14,262 - INFO - 192.168.1.194 - - [13/Apr/2025 17:41:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-13 17:41:31,569 - INFO - 192.168.1.194 - - [13/Apr/2025 17:41:31] "GET / HTTP/1.1" 200 -
+2025-04-13 17:41:31,636 - INFO - 192.168.1.194 - - [13/Apr/2025 17:41:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 17:41:31,636 - INFO - 192.168.1.194 - - [13/Apr/2025 17:41:31] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2025-04-13 17:41:37,143 - ERROR - Error extracting PDF features from ./uploads\test3.pdf: EOF marker not found
+2025-04-13 17:41:37,144 - ERROR - Error in /predict: Failed to process PDF: EOF marker not found
+2025-04-13 17:41:37,145 - INFO - 192.168.1.194 - - [13/Apr/2025 17:41:37] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-13 17:46:12,925 - INFO - 192.168.1.194 - - [13/Apr/2025 17:46:12] "GET / HTTP/1.1" 200 -
+2025-04-13 17:46:12,980 - INFO - 192.168.1.194 - - [13/Apr/2025 17:46:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-13 17:46:12,981 - INFO - 192.168.1.194 - - [13/Apr/2025 17:46:12] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2025-04-13 17:46:16,225 - ERROR - Error extracting PDF features from ./uploads\test3.pdf: EOF marker not found
+2025-04-13 17:46:16,227 - ERROR - Error in /predict: Failed to process PDF: EOF marker not found
+2025-04-13 17:46:16,227 - INFO - 192.168.1.194 - - [13/Apr/2025 17:46:16] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-13 17:46:51,716 - ERROR - Error extracting PDF features from ./uploads\test3.pdf: EOF marker not found
+2025-04-13 17:46:51,716 - ERROR - Error in /predict: Failed to process PDF: EOF marker not found
+2025-04-13 17:46:51,717 - INFO - 192.168.1.194 - - [13/Apr/2025 17:46:51] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-13 17:47:51,266 - WARNING - incorrect startxref pointer(1)
+2025-04-13 17:47:51,296 - INFO - 192.168.1.194 - - [13/Apr/2025 17:47:51] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:48:22,596 - WARNING - incorrect startxref pointer(1)
+2025-04-13 17:48:22,603 - INFO - 192.168.1.194 - - [13/Apr/2025 17:48:22] "POST /predict HTTP/1.1" 200 -
+2025-04-13 17:50:23,917 - WARNING - incorrect startxref pointer(1)
+2025-04-13 17:50:23,926 - INFO - 192.168.1.194 - - [13/Apr/2025 17:50:23] "POST /predict HTTP/1.1" 200 -

@@ -1,31 +1,48 @@
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers, callbacks, applications
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
+# from data_loader import load_dataset
 import os
 
-def load_dataset(dataset_path, image_size=(128, 128), batch_size=32):
-    train_dataset = tf.keras.utils.image_dataset_from_directory(
+
+def load_dataset(dataset_path, img_size=(128, 128), batch_size=32, augment=True):
+    datagen_params = {
+        "rescale": 1.0 / 255,
+        "validation_split": 0.2  
+    }
+
+    if augment:
+        datagen_params.update({
+            "rotation_range": 20,
+            "width_shift_range": 0.2,
+            "height_shift_range": 0.2,
+            "shear_range": 0.2,
+            "zoom_range": 0.2,
+            "horizontal_flip": True
+        })
+
+    train_datagen = ImageDataGenerator(**datagen_params)
+    val_datagen = ImageDataGenerator(rescale=1.0 / 255, validation_split=0.2)
+
+    train_generator = train_datagen.flow_from_directory(
         dataset_path,
-        label_mode='binary',  # Nhãn nhị phân: 0 (legitimate), 1 (phishing)
-        image_size=image_size,
+        target_size=img_size,
         batch_size=batch_size,
-        validation_split=0.2,
-        subset="training",
-        seed=42
+        class_mode='binary',
+        subset='training'
     )
-    
-    val_dataset = tf.keras.utils.image_dataset_from_directory(
+
+    val_generator = val_datagen.flow_from_directory(
         dataset_path,
-        label_mode='binary',
-        image_size=image_size,
+        target_size=img_size,
         batch_size=batch_size,
-        validation_split=0.2,
-        subset="validation",
-        seed=42
+        class_mode='binary',
+        subset='validation'
     )
-    
-    return train_dataset, val_dataset
+
+    return train_generator, val_generator
 
 # Sử dụng Transfer Learning (EfficientNetB0)
 def build_cnn(input_shape=(128, 128, 3)):
@@ -44,7 +61,7 @@ def build_cnn(input_shape=(128, 128, 3)):
     
     model.compile(
         optimizer=keras.optimizers.Adam(learning_rate=0.0001),
-        loss='binary_crossentropy',
+        loss='binary_crossentropy', 
         metrics=['accuracy']
     )
     
