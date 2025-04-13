@@ -3,38 +3,63 @@ function showLoading(target) {
 }
 
 function checkURL() {
-  const url = document.getElementById("urlInput").value;
-  
+  const urlInput = document.getElementById("urlInput");
+  let url = urlInput.value.trim();
+
   if (!url) {
     alert("Please enter a URL!");
     return;
   }
-  
-  showLoading("urlResult");
 
-  const data = { url: url };
+  // Auto prepend https:// if missing
+  if (!/^https?:\/\//i.test(url)) {
+    url = 'https://' + url;
+  }
+
+  const urlPattern = /^(https?:\/\/)([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/\S*)?$/;
+
+  if (!urlPattern.test(url)) {
+    alert("Please enter a valid URL (e.g. https://example.com)");
+    return;
+  }
+
+  showLoading("urlResult");
 
   fetch("/predict", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
+    body: JSON.stringify({ url })
   })
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => {
     if (data.error) {
-      alert("Error: " + data.error);
+      document.getElementById("urlResult").innerHTML = `<p style="color: red;">Error: ${data.error}</p>`;
       return;
     }
+
     document.getElementById("urlResult").innerHTML = `
       <p><strong>URL:</strong> ${data.url}</p>
       <p><strong>Random Forest Confidence:</strong> ${data.rf_confidence}</p>
       <p><strong>SVM Confidence:</strong> ${data.svm_confidence}</p>
       <p><strong>Ensemble Confidence:</strong> ${data.ensemble_confidence}</p>
-      <p><strong>Final Decision:</strong> <span style="color: ${data.result === 'Phishing' ? 'red' : 'green'}">${data.result}</span></p>
+      <p><strong>Final Decision:</strong> 
+        <span style="color: ${data.result === 'Phishing' ? 'red' : 'green'}; font-weight: bold;">
+          ${data.result}
+        </span>
+      </p>
     `;
   })
-  .catch(error => console.error("Error:", error));
+  .catch(error => {
+    console.error("Error:", error);
+    document.getElementById("urlResult").innerHTML = `<p style="color: red;">Failed to check URL: ${error.message}</p>`;
+  });
 }
+
 
 function uploadFile() {
   const fileInput = document.getElementById("fileInput");
